@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  background: #f8f7f3;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #f8f7f3;
+  color: #17202a;
+}
+
+::selection {
+  background: #c5974b;
+  color: #17202a;
+}
+
+.skills-board-wrap {
+  transform-style: preserve-3d;
+  perspective: 1200px;
+  animation: board-hover 5.4s ease-in-out infinite;
+}
+
+.skills-board-iso {
+  transform-style: preserve-3d;
+  transform: rotateX(58deg) rotateZ(-34deg);
+}
+
+.skill-key {
+  transform-style: preserve-3d;
+  animation: key-float 2.8s ease-in-out infinite;
+}
+
+.skill-key::before {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  z-index: 2;
+  border-radius: 0.9rem;
+  background: linear-gradient(120deg, transparent 20%, rgba(255, 255, 255, 0.42), transparent 80%);
+  opacity: 0;
+  transform: translateX(-120%);
+  animation: key-shine 3.8s ease-in-out infinite;
+  animation-delay: inherit;
+  pointer-events: none;
+}
+
+.skill-key::after {
+  content: "";
+  position: absolute;
+  inset: auto 8px -12px 8px;
+  height: 16px;
+  border-radius: 0 0 16px 16px;
+  background: rgba(0, 0, 0, 0.5);
+  filter: blur(2px);
+  transform: translateZ(-16px);
+}
+
+@keyframes board-hover {
+  0%,
+  100% {
+    transform: translateY(0) rotateZ(0deg);
+  }
+  50% {
+    transform: translateY(-18px) rotateZ(1.8deg);
+  }
+}
+
+@keyframes key-float {
+  0%,
+  100% {
+    transform: translateZ(0) translateY(0);
+  }
+  50% {
+    transform: translateZ(26px) translateY(-8px);
+  }
+}
+
+@keyframes key-shine {
+  0%,
+  42% {
+    opacity: 0;
+    transform: translateX(-120%);
+  }
+  55% {
+    opacity: 0.75;
+  }
+  72%,
+  100% {
+    opacity: 0;
+    transform: translateX(120%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skills-board-wrap,
+  .skill-key,
+  .skill-key::before {
+    animation: none;
+  }
+}

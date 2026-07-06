@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2048" height="1152" viewBox="0 0 2048 1152">
+  <rect width="2048" height="1152" fill="#f4f6f9"/>
+  <rect x="0" y="0" width="86" height="1152" fill="#ff5a2b"/>
+  <g fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" opacity=".96">
+    <path d="M35 38h18M35 51h18M35 64h18"/>
+    <rect x="31" y="119" width="9" height="9" rx="1"/><rect x="48" y="119" width="9" height="9" rx="1"/><rect x="31" y="136" width="9" height="9" rx="1"/><rect x="48" y="136" width="9" height="9" rx="1"/>
+    <path d="M31 218l12-13 9 8 12-20"/><path d="M32 285c6-8 17-8 23 0M29 302c10-12 31-12 40 0"/>
+    <path d="M31 373h32M35 339v34M47 350v23M59 330v43"/>
+    <path d="M34 452h29M36 425h25v27H36z"/>
+    <path d="M31 536c10 10 22 10 32 0M35 520a5 5 0 1 0 0-1M59 520a5 5 0 1 0 0-1"/>
+  </g>
+  <circle cx="43" cy="1107" r="23" fill="#58c7d9"/>
+  <text x="43" y="1116" text-anchor="middle" font-family="Inter, Arial" font-size="24">🦊</text>
+
+  <rect x="86" y="0" width="1962" height="98" fill="#fff"/>
+  <rect x="141" y="23" width="348" height="54" rx="8" fill="#fff" stroke="#ff6a32" stroke-width="2"/>
+  <text x="196" y="59" font-family="Inter, Arial" font-size="22" fill="#7b8493">Search...</text>
+  <circle cx="168" cy="50" r="8" fill="none" stroke="#a8b2c1" stroke-width="3"/>
+  <path d="M174 56l9 9" stroke="#a8b2c1" stroke-width="3" stroke-linecap="round"/>
+  <rect x="964" y="23" width="270" height="54" rx="8" fill="#fff" stroke="#ff6a32" stroke-width="2"/>
+  <text x="1018" y="58" font-family="Inter, Arial" font-size="21" font-weight="700" fill="#242936">Tat ca co so</text>
+  <text x="1194" y="58" font-family="Inter, Arial" font-size="24" fill="#7b8493">⌄</text>
+  <circle cx="1758" cy="28" r="11" fill="#e54967"/><text x="1758" y="36" text-anchor="middle" font-family="Inter, Arial" font-size="16" font-weight="800" fill="#fff">2</text>
+  <text x="1729" y="62" font-family="Inter, Arial" font-size="31" fill="#e54967">♧</text>
+  <circle cx="1818" cy="50" r="23" fill="#58c7d9"/>
+  <text x="1818" y="59" text-anchor="middle" font-family="Inter, Arial" font-size="24">🦊</text>
+  <text x="1855" y="59" font-family="Inter, Arial" font-size="24" font-weight="800" fill="#151927">Face Wash Fox IT</text>
+
+  <text x="120" y="166" font-family="Inter, Arial" font-size="34" font-weight="800" fill="#151927">Dashboard</text>
+  <text x="120" y="212" font-family="Inter, Arial" font-size="24" fill="#626b7a">Welcome back! Here's what's happening with </text>
+  <text x="570" y="212" font-family="Inter, Arial" font-size="24" fill="#ff5a2b">Face Wash Fox</text>
+  <text x="720" y="212" font-family="Inter, Arial" font-size="24" fill="#626b7a"> today.</text>
+
+  <rect x="120" y="252" width="1876" height="236" rx="10" fill="#fff" stroke="#dfe4ec" stroke-width="2"/>
+  <text x="154" y="314" font-family="Inter, Arial" font-size="27" font-weight="800" fill="#151927">Quick Actions</text>
+  <g font-family="Inter, Arial" font-size="19" font-weight="700" fill="#242936">
+    <rect x="154" y="348" width="282" height="106" rx="8" fill="#fff" stroke="#4082ff" stroke-width="3"/><text x="295" y="427" text-anchor="middle">Order Report</text><text x="295" y="396" text-anchor="middle" font-size="34">🛒</text>
+    <rect x="459" y="348" width="282" height="106" rx="8" fill="#fff" stroke="#22c965" stroke-width="3"/><text x="600" y="427" text-anchor="middle">Customer Report</text><text x="600" y="396" text-anchor="middle" font-size="34">♚</text>
+    <rect x="764" y="348" width="282" height="106" rx="8" fill="#fff" stroke="#a855f7" stroke-width="3"/><text x="905" y="427" text-anchor="middle">Services Report</text><text x="905" y="396" text-anchor="middle" font-size="34">√</text>
+    <rect x="1069" y="348" width="282" height="106" rx="8" fill="#fff" stroke="#ff5a2b" stroke-width="3"/><text x="1210" y="427" text-anchor="middle">Accounting Report</text><text x="1210" y="396" text-anchor="middle" font-size="34">▥</text>
+    <rect x="1374" y="348" width="282" height="106" rx="8" fill="#fff" stroke="#ec4899" stroke-width="3"/><text x="1515" y="427" text-anchor="middle">Generate AI</text><text x="1515" y="396" text-anchor="middle" font-size="34">✧</text>
+    <rect x="1679" y="348" width="282" height="106" rx="8" fill="#fff" stroke="#6b7280" stroke-width="3"/><text x="1820" y="427" text-anchor="middle">System Settings</text><text x="1820" y="396" text-anchor="middle" font-size="34">⚙</text>
+  </g>
+
+  <text x="192" y="563" font-family="Inter, Arial" font-size="44" font-weight="900" fill="#0b1020">Dashboard Quan Ly Kinh Doanh</text>
+  <text x="192" y="602" font-family="Inter, Arial" font-size="22" fill="#8a93a4">Du lieu cap nhat den ngay 26/06/2026</text>
+  <text x="195" y="682" font-family="Inter, Arial" font-size="36" font-weight="900" fill="#334155">$  Doanh So</text>
+  <rect x="192" y="722" width="1734" height="370" rx="12" fill="#fff" stroke="#ffc9bb"/>
+  <text x="246" y="798" font-family="Inter, Arial" font-size="34" font-weight="900" fill="#ff5a2b">Bang Tong Doanh So</text>
+  <rect x="225" y="870" width="1668" height="58" rx="10" fill="#d8f5e6"/>
+  <text x="242" y="906" font-family="Inter, Arial" font-size="18" font-weight="800" fill="#334155">Phuong thuc thanh toan</text>
+  <text x="1120" y="906" font-family="Inter, Arial" font-size="18" font-weight="800" fill="#334155">So tien</text>
+  <text x="1380" y="906" font-family="Inter, Arial" font-size="18" font-weight="800" fill="#334155">Ty le</text>
+  <text x="1734" y="906" font-family="Inter, Arial" font-size="18" font-weight="800" fill="#334155">GD</text>
+  <rect x="225" y="947" width="1668" height="66" rx="9" fill="#fff" stroke="#ffd8cf"/>
+  <text x="276" y="987" font-family="Inter, Arial" font-size="23" font-weight="800" fill="#151927">TM+CK+QT</text>
+  <text x="1032" y="987" font-family="Inter, Arial" font-size="24" font-weight="900" fill="#151927">152.946.300 d</text>
+  <text x="1382" y="987" font-family="Inter, Arial" font-size="22" fill="#ff5a2b">63%</text>
+  <text x="1726" y="987" font-family="Inter, Arial" font-size="22" fill="#768198">1529</text>
+  <rect x="225" y="1029" width="1668" height="66" rx="9" fill="#fff" stroke="#ffd8cf"/>
+  <text x="276" y="1069" font-family="Inter, Arial" font-size="23" font-weight="800" fill="#151927">The Foxie</text>
+  <text x="1032" y="1069" font-family="Inter, Arial" font-size="24" font-weight="900" fill="#151927">76.718.000 d</text>
+  <text x="1382" y="1069" font-family="Inter, Arial" font-size="22" fill="#ff5a2b">32%</text>
+  <text x="1726" y="1069" font-family="Inter, Arial" font-size="22" fill="#768198">767</text>
+  <circle cx="1980" cy="1052" r="40" fill="#e7b26d"/>
+  <text x="1980" y="1064" text-anchor="middle" font-family="Inter, Arial" font-size="34" fill="#8b341a">☏</text>
+</svg>
