@@ -14,6 +14,7 @@ import CertificateUI from "@/components/certificate-ui";
 import { Contact } from "@/components/contact";
 import { SideSocialNav } from "@/components/side-social-nav";
 import { SiteHeader } from "@/components/site-header";
+import { BackToTop } from "@/components/back-to-top";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -43,6 +44,7 @@ export default function Home() {
       <Preloader />
       <SiteHeader />
       <SideSocialNav />
+      <BackToTop />
 
       <main className="relative z-10">
         <Hero />
