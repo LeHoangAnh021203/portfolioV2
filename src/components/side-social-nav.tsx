@@ -133,7 +133,7 @@ function NavIcon({
 }: {
   label: string;
   href: string;
-  icon: React.ComponentType<{ className?: string; "aria-hidden"?: boolean }>;
+  icon: React.ElementType;
   tooltipSide: "left" | "top";
   onLight: boolean;
 }) {
@@ -153,7 +153,7 @@ function NavIcon({
           : "text-white/80 hover:bg-white/10 hover:text-white focus-visible:bg-white/10 focus-visible:text-white",
       ].join(" ")}
     >
-      <Icon className="h-[1.15rem] w-[1.15rem]" aria-hidden={true} />
+      <Icon className="h-[1.15rem] w-[1.15rem]" aria-hidden="true" />
       <TooltipLabel label={label} side={tooltipSide} onLight={onLight} />
     </a>
   );
