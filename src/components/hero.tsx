@@ -15,7 +15,7 @@ export function Hero() {
     const scale = useTransform(scrollYProgress, [0, 0.6], [1, 0.94])
 
     return (
-        <section ref={containerRef} className="relative h-screen min-h-[760px] w-full overflow-hidden bg-[#050505]">
+        <section id="home" ref={containerRef} className="relative h-screen min-h-[760px] w-full overflow-hidden bg-[#050505]">
             <div className="pointer-events-none absolute inset-0 opacity-[0.12] [background-image:linear-gradient(rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.06)_1px,transparent_1px)] [background-size:56px_56px]" />
             <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_63%_52%,rgba(255,255,255,0.04)_0,transparent_38%,rgba(5,5,5,0.84)_82%)]" />
             <div className="absolute inset-0 z-0">
@@ -23,27 +23,6 @@ export function Hero() {
             </div>
 
             <motion.div style={{ opacity, scale }} className="relative z-10 h-full px-6 py-8 md:px-14 md:py-12">
-                <header className="hero-reveal grid grid-cols-3 items-center font-mono text-xs uppercase tracking-[0.24em] text-white/45">
-                    <a className="justify-self-start transition hover:text-white" href="#">
-                        Portfolio <span className="ml-2 inline-block h-2 w-2 rounded-full bg-blue-600" />
-                    </a>
-                    <nav className="hidden justify-self-center gap-12 md:flex">
-                        <a className="transition hover:text-white" href="#about">
-                            <span className="text-blue-600">01</span> About
-                        </a>
-                        <a className="transition hover:text-white" href="#works">
-                            <span className="text-blue-600">02</span> Works
-                        </a>
-                        <a className="transition hover:text-white" href="#contact">
-                            <span className="text-blue-600">03</span> Contact
-                        </a>
-                    </nav>
-                    <p className="hidden justify-self-end md:block">
-                        <span className="mr-4 inline-block h-2 w-2 rounded-full bg-blue-600" />
-                        Available for work
-                    </p>
-                </header>
-
                 <motion.div
                     className="hero-reveal absolute left-6 top-[19%] max-w-[45rem] md:left-14"
                     initial={{ opacity: 0, y: 40 }}

@@ -1,0 +1,209 @@
+export const cv = {
+  name: "Le Hoang Anh",
+  title: "Frontend Developer",
+  subtitle: "React · Next.js · TypeScript",
+  location: "Ho Chi Minh City, Vietnam",
+  phone: "0342 988 398",
+  email: "hoanganhle.work.dev@gmail.com",
+  github: "github.com/LeHoangAnh021203",
+  githubUrl: "https://github.com/LeHoangAnh021203",
+  linkedin: "linkedin.com/in/hoanganhle0212",
+  linkedinUrl: "https://www.linkedin.com/in/hoanganhle0212",
+  languages: "English (Fluent) · Vietnamese (Native)",
+  summary:
+    "Frontend Developer with 3+ years of UI engineering experience and 1+ year delivering production web applications. Specialized in React, Next.js, and TypeScript. Experienced in building responsive interfaces, integrating REST APIs and third-party services (payments, maps, notifications), and deploying to Vercel. Strong English communication; seeking Frontend / Fullstack roles focused on scalable product delivery.",
+
+  skills: {
+    frontend: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "JavaScript (ES6+)",
+      "HTML5",
+      "CSS3",
+      "Tailwind CSS",
+      "Responsive Design",
+      "Figma",
+    ],
+    backend: [
+      "Node.js",
+      "NestJS",
+      "Express",
+      "REST API",
+      "MongoDB",
+      "Supabase",
+    ],
+    tools: [
+      "Git",
+      "GitHub",
+      "GitLab",
+      "Vercel",
+      "Postman",
+      "Leaflet",
+      "Google Sheets API",
+      "MoMo Payment API",
+      "Zalo Mini App",
+      "Zalo OA",
+    ],
+  },
+
+  experience: [
+    {
+      role: "Fullstack Developer (Fresher)",
+      company: "FB Network — Face Wash Fox",
+      period: "Jun 2025 – Present",
+      location: "Ho Chi Minh City",
+      bullets: [
+        "Develop and maintain production web apps using Next.js, TypeScript, and Vercel across campaign, booking, KPI, and reporting systems.",
+        "Implement customer-facing features including voucher flows, MoMo payment checkout, branch locator/booking, OTP authentication, and CRM dashboards.",
+        "Integrate NestJS REST APIs, Google Sheets sync, transactional email, and Zalo OA notifications; manage source control with GitHub/GitLab.",
+        "Support internal tooling for e-commerce data processing and day-to-day operations collaboration via Lark.",
+      ],
+    },
+    {
+      role: "Frontend Developer Intern",
+      company: "FPT Software",
+      period: "Jan 2024 – Apr 2024",
+      location: "Ho Chi Minh City",
+      bullets: [
+        "Built React and TypeScript UI modules with reusable components and maintainable state/data-fetching patterns.",
+        "Integrated backend REST APIs with async handling, error states, and basic technical documentation for handoff.",
+        "Optimized UI rendering and layout consistency based on design specs and code-review feedback.",
+      ],
+    },
+    {
+      role: "Frontend Developer Intern",
+      company: "Vinaphone",
+      period: "May 2023 – Jul 2023",
+      location: "Vietnam",
+      bullets: [
+        "Developed responsive web UI from Figma using HTML5, CSS3, Bootstrap, JavaScript, and Tailwind CSS.",
+        "Improved cross-breakpoint layout consistency and basic page performance for internal/web delivery screens.",
+      ],
+    },
+  ],
+
+  projects: [
+    {
+      name: "FWF Events",
+      type: "Campaign Landing Page",
+      stack: "React · TypeScript · MoMo API · Vercel",
+      demo: "https://event.facewashfox.com/",
+      github: "https://github.com/LeHoangAnh021203/20_10_Events",
+      bullets: [
+        "Delivered a production marketing landing page with voucher checkout and MoMo payment integration for time-sensitive campaigns.",
+      ],
+    },
+    {
+      name: "FWF Map",
+      type: "Store Locator & Booking",
+      stack: "Next.js · TypeScript · Leaflet · Google Sheets · Zalo OA",
+      demo: "https://cuahang.facewashfox.com/",
+      github: "https://github.com/LeHoangAnh021203/FWF_Map",
+      bullets: [
+        "Implemented interactive map booking for ~50 branches with city/service filters, form validation, Google Sheets sync, email, and Zalo OA alerts.",
+      ],
+    },
+    {
+      name: "FWF KPI",
+      type: "KPI Dashboard & E-Learning",
+      stack: "Next.js · TypeScript · OTP Auth",
+      demo: "https://kpi.facewashfox.com/login",
+      github: "https://github.com/LeHoangAnh021203/FWF_KPI",
+      bullets: [
+        "Built an OTP-secured KPI and e-learning platform with reporting views for staff performance monitoring in production.",
+      ],
+    },
+    {
+      name: "CRM FWF",
+      type: "CRM Reporting Dashboard",
+      stack: "React · TypeScript · REST API",
+      demo: "https://report.facewashfox.com",
+      github: "https://github.com/LeHoangAnh021203/CRM_FWF",
+      bullets: [
+        "Developed CRM report views for orders, customers, services, and accounting with API-connected operational data.",
+      ],
+    },
+    {
+      name: "FWF Zalo Mini App",
+      type: "Zalo Mini App Campaign",
+      stack: "React · TypeScript · Zalo Mini App · Supabase",
+      demo: "https://zalo.me/s/3731967213863127552/",
+      github: "https://github.com/LeHoangAnh021203/FWF_ZaloMiniApp",
+      bullets: [
+        "Engineered a voucher campaign Mini App with reward issuance, user wallets, admin controls, and Supabase data storage.",
+      ],
+    },
+    {
+      name: "Dolic Web",
+      type: "Corporate Product Website",
+      stack: "Next.js · React · Tailwind CSS · Radix UI · GSAP",
+      demo: "https://www.dolic.vn/",
+      github: "https://github.com/dolicwebsite-hub/dolic_web",
+      bullets: [
+        "Built a corporate aquaculture website with product catalog, B2B/dealer flows, Google Maps embed, and social contact integrations.",
+      ],
+    },
+  ],
+
+  education: [
+    {
+      school: "FPT School of Business & Technology",
+      degree: "M.S. Business Analytics (MSBA)",
+      period: "Jan 2026 – Present",
+      details:
+        "Applied statistics, data visualization, machine learning, data management, and business problem framing.",
+    },
+    {
+      school: "FPT University — Can Tho",
+      degree: "B.S. Software Engineering · GPA 3.2/4.0",
+      period: "Sep 2021 – May 2025",
+      details:
+        "Coursework: OOP, Data Structures, Databases, JavaScript/TypeScript, Java Web (MVC/Servlet).",
+    },
+  ],
+
+  certifications: [
+    {
+      title: "Product Analytics and AI",
+      issuer: "University of Virginia · Coursera",
+      issued: "Apr 2026",
+      url: "https://www.coursera.org/account/accomplishments/verify/W5KH3I2VPZYP",
+    },
+    {
+      title: "Hypothesis-Driven Development",
+      issuer: "University of Virginia · Coursera",
+      issued: "Mar 2026",
+      url: "https://www.coursera.org/account/accomplishments/verify/ZPUXJET6L7UE",
+    },
+    {
+      title: "Managing an Agile Team",
+      issuer: "University of Virginia · Coursera",
+      issued: "Apr 2026",
+      url: "https://www.coursera.org/account/accomplishments/verify/ZAZ4LYNDHGTO",
+    },
+    {
+      title: "Agile Meets Design Thinking",
+      issuer: "University of Virginia · Coursera",
+      issued: "Feb 2026",
+      url: "https://www.coursera.org/account/accomplishments/verify/VZ66H3XGT7V4",
+    },
+    {
+      title: "Responsive Web Design",
+      issuer: "freeCodeCamp",
+      issued: "Completed",
+      url: "https://www.freecodecamp.org/certification/lehoanganh/responsive-web-design",
+    },
+    {
+      title: "Computer Communications",
+      issuer: "University of Colorado Boulder · Coursera",
+      issued: "Nov 2022",
+      url: "https://www.coursera.org/account/accomplishments/specialization/MKVNHFZ874E5",
+    },
+  ],
+
+  certificationsMoreUrl:
+    "https://www.linkedin.com/in/hoanganhle0212/details/certifications/",
+
+  projectsMoreUrl: "https://github.com/LeHoangAnh021203?tab=repositories",
+} as const;

@@ -11,6 +11,8 @@ import { Skills } from "@/components/skills";
 import Timeline from "@/components/Timeline";
 import { Projects } from "@/components/projects";
 import CertificateUI from "@/components/certificate-ui";
+import { SideSocialNav } from "@/components/side-social-nav";
+import { SiteHeader } from "@/components/site-header";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -35,6 +37,8 @@ export default function Home() {
     <div ref={mainRef} className="relative min-h-screen overflow-x-hidden bg-[#050505] text-white">
       <CustomCursor />
       <Preloader />
+      <SiteHeader />
+      <SideSocialNav />
 
       <main className="relative z-10">
         <Hero />

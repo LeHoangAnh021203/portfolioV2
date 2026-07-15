@@ -27,7 +27,7 @@ export function Card() {
     }
 
     return (
-        <section className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden bg-black">
+        <section id="about" className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden bg-black">
             <div className="relative scale-[0.45] sm:scale-[0.62] md:scale-[0.82] lg:scale-100" style={{ perspective: "1400px" }}>
                 <div
                     className="relative cursor-pointer"

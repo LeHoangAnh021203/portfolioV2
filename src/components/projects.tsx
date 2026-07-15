@@ -147,7 +147,7 @@ export function Projects() {
     }
 
     return (
-        <section id="works" className="relative overflow-hidden bg-[#e8e8e6] px-4 py-24 text-[#111111] sm:px-8 lg:py-32">
+        <section id="works" data-nav-theme="light" className="relative overflow-hidden bg-[#e8e8e6] px-4 py-24 text-[#111111] sm:px-8 lg:py-32">
             <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.7),rgba(232,232,230,0.85))]" />
             <div className="relative z-10 mx-auto max-w-7xl">
                 <motion.div
