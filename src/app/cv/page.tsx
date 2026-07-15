@@ -54,6 +54,10 @@ export default function CVPage() {
               <a href={cv.linkedinUrl} target="_blank" rel="noreferrer">
                 {cv.linkedin}
               </a>
+              <ContactSep />
+              <a href={cv.websiteUrl} target="_blank" rel="noreferrer">
+                {cv.website}
+              </a>
             </p>
           </header>
 

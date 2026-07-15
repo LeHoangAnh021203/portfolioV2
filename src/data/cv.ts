@@ -9,6 +9,8 @@ export const cv = {
   githubUrl: "https://github.com/LeHoangAnh021203",
   linkedin: "linkedin.com/in/hoanganhle0212",
   linkedinUrl: "https://www.linkedin.com/in/hoanganhle0212",
+  website: "Portfolio",
+  websiteUrl: "https://portfolio-v2-psi-cyan.vercel.app/",
   languages: "English (Fluent) · Vietnamese (Native)",
   summary:
     "Frontend Developer with 3+ years of UI engineering experience and 1+ year delivering production web applications. Specialized in React, Next.js, and TypeScript. Experienced in building responsive interfaces, integrating REST APIs and third-party services (payments, maps, notifications), and deploying to Vercel. Strong English communication; seeking Frontend / Fullstack roles focused on scalable product delivery.",
