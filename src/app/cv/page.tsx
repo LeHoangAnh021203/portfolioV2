@@ -4,7 +4,27 @@ import { cv } from "@/data/cv";
 import Link from "next/link";
 
 function ContactSep() {
-  return <span className="text-[#b0b6bd] print:text-[#999]" aria-hidden>|</span>;
+  return (
+    <span className="text-[#b0b6bd] print:text-[#999]" aria-hidden>
+      |
+    </span>
+  );
+}
+
+function CvLink({
+  href,
+  label,
+  className = "",
+}: {
+  href: string;
+  label: string;
+  className?: string;
+}) {
+  return (
+    <a href={href} className={`underline underline-offset-2 ${className}`}>
+      {label}
+    </a>
+  );
 }
 
 export default function CVPage() {
@@ -28,7 +48,6 @@ export default function CVPage() {
         </div>
 
         <article className="cv-sheet bg-white px-9 py-7 shadow-[0_8px_28px_rgba(17,24,39,0.08)] print:px-0 print:py-0 print:shadow-none">
-          {/* Header — ATS-friendly, single column */}
           <header className="border-b border-[#111827] pb-3.5">
             <h1 className="text-[1.75rem] font-bold leading-none tracking-tight text-[#111827]">
               {cv.name}
@@ -43,21 +62,25 @@ export default function CVPage() {
             <p className="mt-2 flex flex-wrap items-center gap-x-2 gap-y-0.5 text-[11.5px] leading-relaxed text-[#374151]">
               <span>{cv.location}</span>
               <ContactSep />
-              <a href={`tel:${cv.phone.replace(/\s/g, "")}`}>{cv.phone}</a>
-              <ContactSep />
-              <a href={`mailto:${cv.email}`}>{cv.email}</a>
-              <ContactSep />
-              <a href={cv.githubUrl} target="_blank" rel="noreferrer">
-                {cv.github}
+              <a
+                href={`tel:${cv.phone.replace(/\s/g, "")}`}
+                className="underline underline-offset-2"
+              >
+                {cv.phone}
               </a>
               <ContactSep />
-              <a href={cv.linkedinUrl} target="_blank" rel="noreferrer">
-                {cv.linkedin}
+              <a
+                href={`mailto:${cv.email}`}
+                className="underline underline-offset-2"
+              >
+                {cv.email}
               </a>
               <ContactSep />
-              <a href={cv.websiteUrl} target="_blank" rel="noreferrer">
-                {cv.website}
-              </a>
+              <CvLink href={cv.githubUrl} label="GitHub" />
+              <ContactSep />
+              <CvLink href={cv.linkedinUrl} label="LinkedIn" />
+              <ContactSep />
+              <CvLink href={cv.websiteUrl} label={cv.website} />
             </p>
           </header>
 
@@ -74,15 +97,21 @@ export default function CVPage() {
               <dl className="mt-1.5 space-y-1 text-[12.5px] leading-snug">
                 <div className="grid grid-cols-[6.25rem_1fr] gap-x-2">
                   <dt className="font-semibold text-[#111827]">Frontend</dt>
-                  <dd className="text-[#1f2937]">{cv.skills.frontend.join(", ")}</dd>
+                  <dd className="text-[#1f2937]">
+                    {cv.skills.frontend.join(", ")}
+                  </dd>
                 </div>
                 <div className="grid grid-cols-[6.25rem_1fr] gap-x-2">
                   <dt className="font-semibold text-[#111827]">Backend</dt>
-                  <dd className="text-[#1f2937]">{cv.skills.backend.join(", ")}</dd>
+                  <dd className="text-[#1f2937]">
+                    {cv.skills.backend.join(", ")}
+                  </dd>
                 </div>
                 <div className="grid grid-cols-[6.25rem_1fr] gap-x-2">
                   <dt className="font-semibold text-[#111827]">Tools</dt>
-                  <dd className="text-[#1f2937]">{cv.skills.tools.join(", ")}</dd>
+                  <dd className="text-[#1f2937]">
+                    {cv.skills.tools.join(", ")}
+                  </dd>
                 </div>
                 <div className="grid grid-cols-[6.25rem_1fr] gap-x-2">
                   <dt className="font-semibold text-[#111827]">Languages</dt>
@@ -131,26 +160,20 @@ export default function CVPage() {
                           — {p.type}
                         </span>
                       </h3>
-                      <div className="flex gap-2.5 text-[11px] font-medium">
+                      <div className="flex flex-wrap gap-x-2.5 gap-y-0.5 text-[11px] font-medium">
                         {p.demo && (
-                          <a
+                          <CvLink
                             href={p.demo}
-                            target="_blank"
-                            rel="noreferrer"
-                            className="text-[#111827] underline underline-offset-2"
-                          >
-                            Live
-                          </a>
+                            label="Live"
+                            className="text-[#111827]"
+                          />
                         )}
                         {p.github && (
-                          <a
+                          <CvLink
                             href={p.github}
-                            target="_blank"
-                            rel="noreferrer"
-                            className="text-[#111827] underline underline-offset-2"
-                          >
-                            GitHub
-                          </a>
+                            label="GitHub"
+                            className="text-[#111827]"
+                          />
                         )}
                       </div>
                     </div>
@@ -164,14 +187,11 @@ export default function CVPage() {
                 ))}
               </div>
               <p className="mt-1.5 text-[11.5px] text-[#4b5563]">
-                <a
+                <CvLink
                   href={cv.projectsMoreUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="font-medium text-[#111827] underline underline-offset-2"
-                >
-                  See more on GitHub
-                </a>
+                  label="See more on GitHub"
+                  className="font-medium text-[#111827]"
+                />
                 <span> — full repositories list</span>
               </p>
             </section>
@@ -202,34 +222,33 @@ export default function CVPage() {
               <h2 className="cv-section">Certifications</h2>
               <ul className="mt-1.5 space-y-0.5 text-[12px] leading-snug text-[#1f2937]">
                 {cv.certifications.map((c) => (
-                  <li key={c.title} className="flex flex-wrap items-baseline gap-x-2">
+                  <li
+                    key={c.title}
+                    className="flex flex-wrap items-baseline gap-x-2"
+                  >
                     <span>
-                      <span className="font-semibold text-[#111827]">{c.title}</span>
+                      <span className="font-semibold text-[#111827]">
+                        {c.title}
+                      </span>
                       <span className="text-[#4b5563]">
                         {" "}
                         — {c.issuer} ({c.issued})
                       </span>
                     </span>
-                    <a
+                    <CvLink
                       href={c.url}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="shrink-0 text-[11px] font-medium text-[#111827] underline underline-offset-2"
-                    >
-                      Credential
-                    </a>
+                      label="Credential"
+                      className="shrink-0 text-[11px] font-medium text-[#111827]"
+                    />
                   </li>
                 ))}
               </ul>
               <p className="mt-1.5 text-[11.5px] text-[#4b5563]">
-                <a
+                <CvLink
                   href={cv.certificationsMoreUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="font-medium text-[#111827] underline underline-offset-2"
-                >
-                  See more on LinkedIn
-                </a>
+                  label="See more on LinkedIn"
+                  className="font-medium text-[#111827]"
+                />
                 <span> — full licenses & certifications list</span>
               </p>
             </section>
