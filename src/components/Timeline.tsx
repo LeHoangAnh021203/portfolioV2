@@ -56,7 +56,7 @@ export default function Timeline() {
     })
 
     return (
-        <section ref={containerRef} className="overflow-hidden bg-black py-24 text-white">
+        <section id="journey" ref={containerRef} className="scroll-mt-24 overflow-hidden bg-black py-24 text-white">
             <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
                 <motion.div
                     className="mb-20 text-center"
