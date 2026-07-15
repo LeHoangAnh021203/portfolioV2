@@ -127,7 +127,7 @@ function SkillTile({
                             {skill.label}
                         </span>
                     )}
-                    <span className="mt-2 max-w-full px-2 text-center text-[9px] font-semibold uppercase tracking-[0.14em] opacity-75">
+                    <span className="mt-2 max-w-full px-2 text-center text-[9px] font-semibold uppercase tracking-normal opacity-75">
                         {skill.level}%
                     </span>
                 </div>
@@ -211,13 +211,13 @@ export function Skills() {
                     viewport={{ once: true, margin: "-120px" }}
                     transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
                 >
-                    <p className="font-mono text-sm uppercase tracking-[0.42em] text-white/45">
+                    <p className="text-sm font-semibold uppercase tracking-normal text-white/45">
                         Front End / Back End / Tools & Apps.
                     </p>
-                    <h2 className="mt-7 font-serif text-[clamp(4.2rem,11vw,9.5rem)] font-black uppercase leading-[0.78] text-white">
+                    <h2 className="mt-7 font-sans text-[clamp(4.2rem,11vw,9.5rem)] font-black uppercase leading-[0.78] text-white">
                         Skills
                     </h2>
-                    <p className="mt-5 max-w-sm font-mono text-xs uppercase tracking-[0.18em] text-white/42">
+                    <p className="mt-5 max-w-sm text-xs font-semibold uppercase tracking-normal text-white/42">
                         Hint: press a logo key to update the panel.
                     </p>
                 </motion.div>
@@ -231,7 +231,7 @@ export function Skills() {
                             animate={{ opacity: 1, rotate: -8, x: 0, y: 0 }}
                             transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
                         >
-                            <p className="font-mono text-[11px] uppercase tracking-[0.34em] text-white/38">
+                            <p className="text-[11px] font-semibold uppercase tracking-normal text-white/38">
                                 {categoryLabel(activeSkill.category)}
                             </p>
                             <h3 className="mt-3 text-3xl font-black leading-tight text-white md:text-4xl">
@@ -282,7 +282,7 @@ export function Skills() {
                     >
                         <div className="mb-6 flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
                             <div>
-                                <p className="font-mono text-xs uppercase tracking-[0.28em] text-white/40">Selected</p>
+                                <p className="text-xs font-semibold uppercase tracking-normal text-white/40">Selected</p>
                                 <h3 className="mt-2 text-3xl font-black text-white">{activeSkill.name}</h3>
                             </div>
                             <div className="flex w-fit rounded-md border border-white/15 bg-white/[0.035] p-1">
