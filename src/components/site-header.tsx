@@ -113,20 +113,23 @@ export function SiteHeader() {
     >
       <div
         className={[
-          "grid grid-cols-3 items-center px-6 py-5 font-mono text-xs uppercase tracking-[0.24em] md:px-14 md:py-6",
+          "mx-auto flex min-h-[64px] w-full max-w-[1920px] flex-col justify-center gap-3 px-5 py-4 font-mono text-[11px] uppercase tracking-[0.18em] sm:px-8 md:min-h-[72px] md:flex-row md:items-center md:gap-6 md:px-10 md:py-0 lg:grid lg:grid-cols-[auto_1fr_auto] lg:gap-8",
           textMuted,
         ].join(" ")}
       >
         <a
           href="#home"
           data-cursor-hover
-          className={`justify-self-start transition ${textActive} hover:opacity-80`}
+          className={`inline-flex w-fit shrink-0 items-center gap-2 transition ${textActive} hover:opacity-80`}
         >
-          Portfolio{" "}
-          <span className="ml-2 inline-block h-2 w-2 rounded-full bg-blue-600" />
+          Portfolio
+          <span className="inline-block h-2 w-2 rounded-full bg-blue-600" />
         </a>
 
-        <nav className="hidden justify-self-center gap-5 lg:flex xl:gap-8">
+        <nav
+          aria-label="Primary navigation"
+          className="flex max-w-full items-center gap-3 overflow-x-auto pb-0.5 [scrollbar-width:none] md:justify-center md:gap-4 lg:gap-6 xl:gap-8 [&::-webkit-scrollbar]:hidden"
+        >
           {sections.map((section, index) => {
             const isActive = activeId === section.id;
             return (
@@ -134,16 +137,14 @@ export function SiteHeader() {
                 key={section.id}
                 href={`#${section.id}`}
                 data-cursor-hover
-                className={`transition ${isActive ? textActive : "hover:opacity-100"} ${
-                  isActive ? "" : "opacity-70 hover:opacity-100"
+                className={`shrink-0 transition ${
+                  isActive ? textActive : "opacity-70 hover:opacity-100"
                 }`}
               >
                 <span className={accent}>
                   {String(index + 1).padStart(2, "0")}
                 </span>{" "}
-                <span className={isActive ? textActive : undefined}>
-                  {section.label}
-                </span>
+                {section.label}
               </a>
             );
           })}
@@ -152,9 +153,9 @@ export function SiteHeader() {
         <a
           href="#contact"
           data-cursor-hover
-          className="hidden justify-self-end transition hover:opacity-80 md:block"
+          className="hidden w-fit shrink-0 items-center gap-3 justify-self-end transition hover:opacity-80 md:inline-flex"
         >
-          <span className="mr-4 inline-block h-2 w-2 rounded-full bg-blue-600" />
+          <span className="inline-block h-2 w-2 rounded-full bg-blue-600" />
           Available for work
         </a>
       </div>
