@@ -11,6 +11,7 @@ import { Skills } from "@/components/skills";
 import Timeline from "@/components/Timeline";
 import { Projects } from "@/components/projects";
 import CertificateUI from "@/components/certificate-ui";
+import { Contact } from "@/components/contact";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -43,6 +44,7 @@ export default function Home() {
         <Timeline/>
         <Projects />
         <CertificateUI />
+        <Contact />
       </main>
     </div>
   );
