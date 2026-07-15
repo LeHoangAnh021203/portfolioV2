@@ -5,12 +5,13 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Preloader from "@/components/preloader";
 import { Card } from "@/components/Card";
-import { CustomCursor } from "@/components/custom-cursor"
+import { CustomCursor } from "@/components/custom-cursor";
 import { Hero } from "@/components/hero";
 import { Skills } from "@/components/skills";
 import Timeline from "@/components/Timeline";
 import { Projects } from "@/components/projects";
 import CertificateUI from "@/components/certificate-ui";
+import { Contact } from "@/components/contact";
 import { SideSocialNav } from "@/components/side-social-nav";
 import { SiteHeader } from "@/components/site-header";
 
@@ -26,7 +27,7 @@ export default function Home() {
         opacity: 0,
         duration: 1,
         ease: "power3.out",
-        stagger: 0.08
+        stagger: 0.08,
       });
     }, mainRef);
 
@@ -34,7 +35,10 @@ export default function Home() {
   }, []);
 
   return (
-    <div ref={mainRef} className="relative min-h-screen overflow-x-hidden bg-[#050505] text-white">
+    <div
+      ref={mainRef}
+      className="relative min-h-screen overflow-x-hidden bg-[#050505] text-white"
+    >
       <CustomCursor />
       <Preloader />
       <SiteHeader />
@@ -44,9 +48,10 @@ export default function Home() {
         <Hero />
         <Card />
         <Skills />
-        <Timeline/>
+        <Timeline />
         <Projects />
         <CertificateUI />
+        <Contact />
       </main>
     </div>
   );

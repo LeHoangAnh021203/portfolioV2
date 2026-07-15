@@ -79,7 +79,7 @@ export default function Preloader() {
                     />
                     <span className="absolute -bottom-1 left-1/2 h-2 w-16 -translate-x-1/2 rounded-full bg-cyan-300/70 blur-md" />
                 </div>
-                <p className="mt-4 text-sm font-medium uppercase tracking-[0.28em] text-cyan-100">
+                <p className="mt-4 text-sm font-medium uppercase tracking-normal text-cyan-100">
                     Le Hoang Anh
                 </p>
             </div>
@@ -90,7 +90,7 @@ export default function Preloader() {
             </div>
 
             {/* Loading text */}
-            <p className="text-slate-400 mt-4 text-sm tracking-wide">Loading Experience...</p>
+            <p className="text-slate-400 mt-4 text-sm tracking-normal">Loading Experience...</p>
         </div>
     )
 }

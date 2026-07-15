@@ -8,6 +8,7 @@ const sections = [
   { id: "experience", label: "Experience" },
   { id: "works", label: "Works" },
   { id: "certifications", label: "Certs" },
+  { id: "contact", label: "Contact" },
 ] as const;
 
 export function SiteHeader() {
@@ -125,7 +126,7 @@ export function SiteHeader() {
           <span className="ml-2 inline-block h-2 w-2 rounded-full bg-blue-600" />
         </a>
 
-        <nav className="hidden justify-self-center gap-6 lg:flex xl:gap-10">
+        <nav className="hidden justify-self-center gap-5 lg:flex xl:gap-8">
           {sections.map((section, index) => {
             const isActive = activeId === section.id;
             return (
@@ -148,10 +149,14 @@ export function SiteHeader() {
           })}
         </nav>
 
-        <p className="hidden justify-self-end md:block">
+        <a
+          href="#contact"
+          data-cursor-hover
+          className="hidden justify-self-end transition hover:opacity-80 md:block"
+        >
           <span className="mr-4 inline-block h-2 w-2 rounded-full bg-blue-600" />
           Available for work
-        </p>
+        </a>
       </div>
     </header>
   );

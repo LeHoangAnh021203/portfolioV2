@@ -51,7 +51,7 @@ export function Card() {
                                 <h2 className="text-[54px] font-black uppercase leading-none tracking-normal text-[#0b7440]">
                                     Le Hoang Anh
                                 </h2>
-                                <p className="mt-3 text-[26px] font-bold tracking-[0.08em] text-[#6f6f6f]">
+                                <p className="mt-3 text-[26px] font-bold tracking-normal text-[#6f6f6f]">
                                     Fullstack Developer
                                 </p>
 
@@ -125,14 +125,14 @@ export function Card() {
                     </div>
 
                     <div
-                        className="absolute inset-0 select-text rounded-xl bg-white px-9 py-9 text-[#6f6f6f] shadow-2xl"
+                        className="absolute inset-0 select-text overflow-hidden rounded-xl bg-white px-8 py-7 text-[#6f6f6f] shadow-2xl"
                         style={{
                             backfaceVisibility: "hidden",
                             transform: "rotateY(180deg)",
                         }}
                     >
-                        <h2 className="text-3xl font-black uppercase leading-none text-black">Targets:</h2>
-                        <ul className="mt-3 list-disc space-y-2 pl-8 text-[25px] leading-tight">
+                        <h2 className="text-[30px] font-black uppercase leading-none text-black">Targets:</h2>
+                        <ul className="mt-3 list-disc space-y-1.5 pl-7 text-[20px] leading-snug">
                             <li>
                                 Passionate developer transitioning from a strong 3-year Front-End foundation to a
                                 Full-Stack role over the past year. Equipped with fluent English communication and
@@ -144,12 +144,13 @@ export function Card() {
                             <li>Good at English communication.</li>
                             <li>3 years experience in front - end developer .</li>
                             <li>1 year experience in fullstack developer.</li>
+                            <li>Experienced with Mall APIs, MoMo payment APIs, and SPayLater payment integration.</li>
                         </ul>
                     </div>
                 </div>
             </div>
 
-            <div className="absolute bottom-8 text-center font-mono text-sm text-white/40">
+            <div className="absolute bottom-8 text-center text-sm font-medium text-white/40">
                 <p>Hover to slow down · Click to {isPaused ? "resume" : "pause"} · Click a link to visit it</p>
             </div>
         </section>

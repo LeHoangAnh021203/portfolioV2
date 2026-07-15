@@ -13,6 +13,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 96px;
 }
 
 #about,
@@ -20,6 +21,7 @@ html {
 #experience,
 #works,
 #certifications,
+#contact,
 #home {
   scroll-margin-top: 5rem;
 }

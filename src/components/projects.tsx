@@ -158,8 +158,8 @@ export function Projects() {
                     transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
                 >
                     <div>
-                        <p className="font-mono text-xs uppercase tracking-[0.38em] text-black/45">Selected work</p>
-                        <h2 className="mt-4 font-serif text-[clamp(3.4rem,8vw,7.5rem)] font-black uppercase leading-[0.84] tracking-normal">
+                        <p className="text-xs font-semibold uppercase tracking-normal text-black/45">Selected work</p>
+                        <h2 className="mt-4 font-sans text-[clamp(3.4rem,8vw,7.5rem)] font-black uppercase leading-[0.84] tracking-normal">
                             Projects
                         </h2>
                     </div>
@@ -216,7 +216,7 @@ export function Projects() {
                                 exit={{ opacity: 0, x: 24 }}
                                 transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
                             >
-                                <p className="font-mono text-xs uppercase tracking-[0.32em] text-white/62">{activeProject.eyebrow}</p>
+                                <p className="text-xs font-semibold uppercase tracking-normal text-white/62">{activeProject.eyebrow}</p>
                                 <h3 className="mt-5 text-4xl font-black leading-none tracking-normal sm:text-5xl md:text-6xl">
                                     {activeProject.title}
                                 </h3>
@@ -225,7 +225,7 @@ export function Projects() {
                                     {activeProject.tech.map((tech) => (
                                         <span
                                             key={tech}
-                                            className="rounded-full border border-white/18 bg-white/12 px-3 py-1 text-xs font-bold uppercase tracking-[0.14em] text-white/82 backdrop-blur"
+                                            className="rounded-full border border-white/18 bg-white/12 px-3 py-1 text-xs font-bold uppercase tracking-normal text-white/82 backdrop-blur"
                                         >
                                             {tech}
                                         </span>
@@ -237,7 +237,7 @@ export function Projects() {
                                         href={activeProject.github}
                                         rel="noreferrer"
                                         target="_blank"
-                                        className="inline-flex items-center gap-2 bg-white px-5 py-3 text-sm font-black uppercase tracking-[0.16em] text-black transition hover:bg-black hover:text-white"
+                                        className="inline-flex items-center gap-2 bg-white px-5 py-3 text-sm font-black uppercase tracking-normal text-black transition hover:bg-black hover:text-white"
                                     >
                                         GitHub
                                         <SiGithub className="h-4 w-4" aria-hidden="true" />
@@ -248,7 +248,7 @@ export function Projects() {
                                             href={activeProject.demo}
                                             rel="noreferrer"
                                             target="_blank"
-                                            className="inline-flex items-center gap-2 border border-white/35 bg-white/10 px-5 py-3 text-sm font-black uppercase tracking-[0.16em] text-white backdrop-blur transition hover:bg-white hover:text-black"
+                                            className="inline-flex items-center gap-2 border border-white/35 bg-white/10 px-5 py-3 text-sm font-black uppercase tracking-normal text-white backdrop-blur transition hover:bg-white hover:text-black"
                                         >
                                             Production
                                             <ExternalLink className="h-4 w-4" aria-hidden="true" />
