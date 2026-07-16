@@ -42,14 +42,14 @@ export function Contact() {
     return (
         <section
             id="contact"
-            className="relative min-h-screen overflow-hidden bg-[#111226] px-5 pb-10 pt-28 text-white sm:px-8 lg:px-12"
+            className="relative min-h-screen overflow-hidden bg-[#111226] px-4 pb-24 pt-24 text-white sm:px-8 sm:pb-10 sm:pt-28 lg:px-12"
         >
             <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_48%_28%,rgba(95,79,255,0.3),transparent_26%),radial-gradient(circle_at_56%_48%,rgba(244,63,190,0.16),transparent_24%),linear-gradient(180deg,#121428,#17172d_48%,#101224)]" />
             <div className="pointer-events-none absolute inset-0 opacity-[0.16] [background-image:linear-gradient(rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] [background-size:74px_74px]" />
             <div className="pointer-events-none absolute left-1/2 top-[46%] h-px w-[78%] -translate-x-1/2 bg-gradient-to-r from-transparent via-white/30 to-transparent" />
             <div className="pointer-events-none absolute bottom-32 left-1/2 h-24 w-[58%] -translate-x-1/2 rounded-full bg-violet-400/16 blur-3xl" />
 
-            <div className="relative z-10 mx-auto flex min-h-[calc(100vh-9.5rem)] max-w-7xl flex-col justify-center">
+            <div className="relative z-10 mx-auto flex min-h-[calc(100vh-8rem)] max-w-7xl flex-col justify-center sm:min-h-[calc(100vh-9.5rem)]">
                 <div className="mx-auto grid w-full max-w-5xl gap-6 lg:grid-cols-[1.08fr_0.92fr]">
                     <motion.div
                         className="space-y-4"

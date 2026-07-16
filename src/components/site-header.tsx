@@ -113,7 +113,7 @@ export function SiteHeader() {
     >
       <div
         className={[
-          "mx-auto flex min-h-[64px] w-full max-w-[1920px] flex-col justify-center gap-3 px-5 py-4 font-mono text-[11px] uppercase tracking-[0.18em] sm:px-8 md:min-h-[72px] md:flex-row md:items-center md:gap-6 md:px-10 md:py-0 lg:grid lg:grid-cols-[auto_1fr_auto] lg:gap-8",
+          "mx-auto flex min-h-[62px] w-full max-w-[1920px] flex-col justify-center gap-2 px-4 py-3 font-mono text-[10px] uppercase tracking-[0.12em] sm:px-8 sm:py-4 sm:text-[11px] md:min-h-[72px] md:flex-row md:items-center md:gap-6 md:px-10 md:py-0 lg:grid lg:grid-cols-[auto_1fr_auto] lg:gap-8",
           textMuted,
         ].join(" ")}
       >

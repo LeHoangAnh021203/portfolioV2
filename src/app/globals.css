@@ -26,6 +26,22 @@ html {
   scroll-margin-top: 5rem;
 }
 
+@media (max-width: 767px) {
+  html {
+    scroll-padding-top: 72px;
+  }
+
+  #about,
+  #skills,
+  #experience,
+  #works,
+  #certifications,
+  #contact,
+  #home {
+    scroll-margin-top: 4.25rem;
+  }
+}
+
 body {
   margin: 0;
   background: #f8f7f3;

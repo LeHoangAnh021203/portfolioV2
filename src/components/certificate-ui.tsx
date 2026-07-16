@@ -201,7 +201,7 @@ export default function CertificateUI() {
     const getCertificationsBySkill = (skill: string) => certifications.filter((cert) => cert.skillList.includes(skill))
 
     return (
-        <section id="certifications" className="relative min-h-screen overflow-hidden bg-[#050505] px-4 py-10 text-white sm:px-8 lg:py-12">
+        <section id="certifications" className="relative min-h-screen overflow-hidden bg-[#050505] px-4 py-8 text-white sm:px-8 lg:py-12">
             <Image
                 src={activeCertification.previewImage ?? diplomaIcon}
                 alt=""
@@ -213,7 +213,7 @@ export default function CertificateUI() {
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_32%_18%,rgba(255,242,180,0.38),transparent_28%),linear-gradient(90deg,rgba(5,5,5,0.58),rgba(65,48,18,0.2),rgba(5,5,5,0.66))]" />
 
             <motion.div
-                className="relative mx-auto min-h-[720px] w-full max-w-[1780px] overflow-hidden rounded-[2rem] border border-white/18 bg-white/[0.11] shadow-[0_35px_120px_rgba(0,0,0,0.48)] backdrop-blur-2xl"
+                className="relative mx-auto min-h-[620px] w-full max-w-[1780px] overflow-hidden rounded-[1.5rem] border border-white/18 bg-white/[0.11] shadow-[0_35px_120px_rgba(0,0,0,0.48)] backdrop-blur-2xl sm:min-h-[720px] sm:rounded-[2rem]"
                 initial={{ opacity: 0, scale: 0.96, y: 28 }}
                 whileInView={{ opacity: 1, scale: 1, y: 0 }}
                 viewport={{ once: true, margin: "-120px" }}
@@ -222,10 +222,10 @@ export default function CertificateUI() {
                 <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(115deg,rgba(255,255,255,0.24),rgba(255,255,255,0.06)_46%,rgba(0,0,0,0.1))]" />
                 <div className="pointer-events-none absolute inset-0 rounded-[2rem] ring-1 ring-inset ring-white/10" />
 
-                <div className="relative z-10 flex min-h-[720px] flex-col px-5 py-7 sm:px-8 lg:px-12 xl:px-14">
-                    <div className="mb-8 flex items-center gap-5">
+                <div className="relative z-10 flex min-h-[620px] flex-col px-4 py-6 sm:min-h-[720px] sm:px-8 sm:py-7 lg:px-12 xl:px-14">
+                    <div className="mb-6 flex items-center gap-3 sm:mb-8 sm:gap-5">
                         <Image src={diplomaIcon} alt="" width={52} height={52} className="h-12 w-12 object-contain sm:h-14 sm:w-14" />
-                        <h2 className="text-4xl font-black tracking-normal sm:text-5xl">Certifications</h2>
+                        <h2 className="text-3xl font-black tracking-normal sm:text-5xl">Certifications</h2>
                     </div>
 
                     <div className="grid flex-1 gap-8 lg:grid-cols-[minmax(0,7fr)_minmax(340px,3fr)] xl:gap-10">
@@ -235,7 +235,7 @@ export default function CertificateUI() {
                                 href={activeCertification.credentialUrl}
                                 rel="noreferrer"
                                 target="_blank"
-                                className="group relative min-h-[520px] flex-1 overflow-hidden rounded-[2rem] border border-white/18 bg-black/34 shadow-[0_30px_80px_rgba(0,0,0,0.28)]"
+                                className="group relative min-h-[380px] flex-1 overflow-hidden rounded-[1.5rem] border border-white/18 bg-black/34 shadow-[0_30px_80px_rgba(0,0,0,0.28)] sm:min-h-[520px] sm:rounded-[2rem]"
                                 aria-label={`Open credential preview for ${activeCertification.title}`}
                             >
                                 <Image
@@ -246,28 +246,28 @@ export default function CertificateUI() {
                                     className="object-cover transition duration-700 group-hover:scale-[1.025]"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/18 to-black/8" />
-                                <div className="absolute inset-x-0 bottom-0 p-7 sm:p-9">
-                                    <div className="mb-6 inline-flex items-center gap-3 rounded-full border border-white/54 bg-black/18 px-5 py-3 text-sm font-black uppercase tracking-normal text-white/88 backdrop-blur-md">
+                                <div className="absolute inset-x-0 bottom-0 p-5 sm:p-9">
+                                    <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/54 bg-black/18 px-4 py-2 text-xs font-black uppercase tracking-normal text-white/88 backdrop-blur-md sm:mb-6 sm:gap-3 sm:px-5 sm:py-3 sm:text-sm">
                                         <ShieldCheck className="h-5 w-5" aria-hidden="true" />
                                         Verified credential
                                     </div>
-                                    <h3 className="text-4xl font-black leading-tight tracking-normal sm:text-5xl">{activeCertification.title}</h3>
-                                    <p className="mt-4 text-2xl font-semibold text-white/84">{activeCertification.issuer}</p>
+                                    <h3 className="text-2xl font-black leading-tight tracking-normal sm:text-5xl">{activeCertification.title}</h3>
+                                    <p className="mt-2 text-base font-semibold text-white/84 sm:mt-4 sm:text-2xl">{activeCertification.issuer}</p>
                                 </div>
                             </a>
 
-                            <div className="rounded-[2rem] border border-white/18 bg-white/16 px-6 py-5 shadow-[0_20px_60px_rgba(0,0,0,0.18)] backdrop-blur-xl">
+                            <div className="rounded-[1.5rem] border border-white/18 bg-white/16 px-4 py-4 shadow-[0_20px_60px_rgba(0,0,0,0.18)] backdrop-blur-xl sm:rounded-[2rem] sm:px-6 sm:py-5">
                                 <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
                                     <div className="min-w-0">
                                         <p className="text-xs font-black uppercase tracking-normal text-white/55">Featured</p>
-                                        <h3 className="mt-1 truncate text-2xl font-black tracking-normal">{activeCertification.title}</h3>
+                                        <h3 className="mt-1 truncate text-xl font-black tracking-normal sm:text-2xl">{activeCertification.title}</h3>
                                     </div>
                                     <a
                                         data-cursor-hover
                                         href={activeCertification.credentialUrl}
                                         rel="noreferrer"
                                         target="_blank"
-                                        className="inline-flex h-12 shrink-0 items-center justify-center gap-2 rounded-full bg-white px-5 text-sm font-black text-black transition hover:scale-[1.03]"
+                                        className="inline-flex h-10 shrink-0 items-center justify-center gap-2 rounded-full bg-white px-4 text-xs font-black text-black transition hover:scale-[1.03] sm:h-12 sm:px-5 sm:text-sm"
                                     >
                                         Show credential
                                         <ExternalLink className="h-4 w-4" aria-hidden="true" />
@@ -276,7 +276,7 @@ export default function CertificateUI() {
                             </div>
                         </div>
 
-                        <div className="flex min-w-0 flex-col overflow-hidden rounded-[2rem] border border-white/24 bg-black/20 backdrop-blur-lg">
+                        <div className="flex min-w-0 flex-col overflow-hidden rounded-[1.5rem] border border-white/24 bg-black/20 backdrop-blur-lg sm:rounded-[2rem]">
                             <div className="flex items-center justify-between gap-3 border-b border-white/12 px-4 py-4">
                                 <div>
                                     <p className="text-xs font-black uppercase tracking-normal text-white/50">Licenses</p>
@@ -285,7 +285,7 @@ export default function CertificateUI() {
                                 <span className="rounded-full border border-white/18 px-3 py-1 text-xs font-black text-white/64">total 4+</span>
                             </div>
 
-                            <div className="min-h-0 flex-1 overflow-y-auto">
+                            <div className="min-h-0 max-h-[360px] flex-1 overflow-y-auto sm:max-h-none">
                                 {certifications.slice(0, 4).map((cert, index) => (
                                     <article key={cert.credentialId}>
                                         <div
