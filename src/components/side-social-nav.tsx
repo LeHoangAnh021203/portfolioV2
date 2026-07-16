@@ -130,12 +130,14 @@ function NavIcon({
   icon: Icon,
   tooltipSide,
   onLight,
+  compact = false,
 }: {
   label: string;
   href: string;
   icon: React.ElementType;
   tooltipSide: "left" | "top";
   onLight: boolean;
+  compact?: boolean;
 }) {
   const isMail = href.startsWith("mailto:");
 
@@ -147,13 +149,14 @@ function NavIcon({
       data-cursor-hover
       aria-label={label}
       className={[
-        "group relative flex h-11 w-11 items-center justify-center rounded-2xl transition focus-visible:outline-none",
+        "group relative flex items-center justify-center rounded-2xl transition focus-visible:outline-none",
+        compact ? "h-9 w-9" : "h-11 w-11",
         onLight
           ? "text-black/80 hover:bg-black/8 hover:text-black focus-visible:bg-black/8 focus-visible:text-black"
           : "text-white/80 hover:bg-white/10 hover:text-white focus-visible:bg-white/10 focus-visible:text-white",
       ].join(" ")}
     >
-      <Icon className="h-[1.15rem] w-[1.15rem]" aria-hidden="true" />
+      <Icon className={compact ? "h-[1rem] w-[1rem]" : "h-[1.15rem] w-[1.15rem]"} aria-hidden="true" />
       <TooltipLabel label={label} side={tooltipSide} onLight={onLight} />
     </a>
   );
@@ -162,9 +165,11 @@ function NavIcon({
 function NavInner({
   orientation,
   onLight,
+  compact = false,
 }: {
   orientation: "vertical" | "horizontal";
   onLight: boolean;
+  compact?: boolean;
 }) {
   const isVertical = orientation === "vertical";
   const tooltipSide = isVertical ? "left" : "top";
@@ -174,7 +179,9 @@ function NavInner({
       className={[
         "flex items-center gap-1 border transition-colors duration-300",
         isVertical
-          ? "flex-col rounded-[1.75rem] px-2.5 py-3"
+          ? compact
+            ? "flex-col rounded-[1.25rem] px-2 py-2"
+            : "flex-col rounded-[1.75rem] px-2.5 py-3"
           : "flex-row rounded-full px-3 py-2",
         onLight
           ? "border-black bg-white/92 shadow-[0_12px_40px_rgba(0,0,0,0.12)] backdrop-blur-md"
@@ -187,6 +194,7 @@ function NavInner({
           {...item}
           tooltipSide={tooltipSide}
           onLight={onLight}
+          compact={compact}
         />
       ))}
 
@@ -204,14 +212,15 @@ function NavInner({
         data-cursor-hover
         aria-label="CV"
         className={[
-          "group relative flex h-11 w-11 items-center justify-center rounded-2xl transition focus-visible:outline-none",
+          "group relative flex items-center justify-center rounded-2xl transition focus-visible:outline-none",
+          compact ? "h-9 w-9" : "h-11 w-11",
           onLight
             ? "text-black/80 hover:bg-black/8 hover:text-black focus-visible:bg-black/8 focus-visible:text-black"
             : "text-white/80 hover:bg-white/10 hover:text-white focus-visible:bg-white/10 focus-visible:text-white",
         ].join(" ")}
       >
         <FileText
-          className="h-[1.15rem] w-[1.15rem]"
+          className={compact ? "h-[1rem] w-[1rem]" : "h-[1.15rem] w-[1.15rem]"}
           strokeWidth={1.75}
           aria-hidden="true"
         />
@@ -235,14 +244,7 @@ export function SideSocialNav() {
         </div>
       </aside>
 
-      <aside
-        className="pointer-events-none fixed inset-x-0 bottom-4 z-50 flex justify-center md:hidden"
-        aria-label="Social links"
-      >
-        <div data-social-dock className="pointer-events-auto">
-          <NavInner orientation="horizontal" onLight={onLight} />
-        </div>
-      </aside>
+      <aside className="hidden" aria-label="Social links" />
     </>
   );
 }

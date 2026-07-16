@@ -56,21 +56,26 @@ export default function Timeline() {
     })
 
     return (
-        <section id="experience" ref={containerRef} className="scroll-mt-24 overflow-hidden bg-black py-24 text-white">
+        <section id="experience" ref={containerRef} className="scroll-mt-24 overflow-hidden bg-black py-16 text-white sm:py-24">
             <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
                 <motion.div
-                    className="mb-20 text-center"
+                    className="mb-14 text-center sm:mb-20"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
                 >
                     <h2 className="text-4xl font-black tracking-normal text-white sm:text-5xl">My Journey</h2>
-                    <p className="mt-6 text-lg text-white/75 sm:text-xl">
+                    <p className="mt-4 text-base text-white/75 sm:mt-6 sm:text-xl">
                         Education and work experience.
                     </p>
                 </motion.div>
 
                 <div className="relative pb-8">
+                    <div className="absolute left-4 top-0 h-full w-px -translate-x-1/2 bg-white/20 md:hidden" />
+                    <motion.div
+                        className="absolute left-4 top-0 h-full w-px origin-top -translate-x-1/2 bg-white md:hidden"
+                        style={{ scaleY }}
+                    />
                     <div className="absolute left-1/2 top-0 hidden h-full w-px -translate-x-1/2 bg-white/20 md:block" />
                     <motion.div
                         className="absolute left-1/2 top-0 hidden h-full w-px origin-top -translate-x-1/2 bg-white md:block"
@@ -109,13 +114,14 @@ function TimelineEvent({
     return (
         <motion.div
             ref={ref}
-            className={`relative mb-20 flex w-full flex-col gap-6 md:min-h-[180px] md:flex-row md:items-center md:justify-between ${
+            className={`relative mb-12 flex w-full flex-col gap-6 pl-9 md:mb-20 md:min-h-[180px] md:flex-row md:items-center md:justify-between md:pl-0 ${
                 index % 2 === 0 ? "md:flex-row-reverse" : ""
             }`}
             initial={{ opacity: 0, y: 50 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
             transition={{ duration: 0.8, delay: index * 0.1 }}
         >
+            <div className="absolute left-4 top-8 h-3.5 w-3.5 -translate-x-1/2 rounded-full bg-white shadow-[0_0_18px_rgba(255,255,255,0.45)] md:hidden" />
             <div className="hidden md:block md:w-5/12" />
             <div className="z-20 hidden md:flex md:w-2/12 md:items-center md:justify-center">
                 <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white shadow-[0_0_40px_rgba(255,255,255,0.18)]">
@@ -128,7 +134,7 @@ function TimelineEvent({
                 whileTap={{ scale: 0.95 }}
                 onClick={onToggle}
             >
-                <div className="rounded-lg border border-white/75 bg-black p-6 shadow-[0_24px_70px_rgba(0,0,0,0.45)]">
+                <div className="rounded-lg border border-white/75 bg-black p-5 shadow-[0_24px_70px_rgba(0,0,0,0.45)] sm:p-6">
                     <span className="text-xl font-black text-white">{event.period}</span>
                     <h3 className="mb-3 mt-2 text-2xl font-black leading-tight text-white">{event.title}</h3>
                     <p className="text-lg leading-8 text-white/85">{event.description}</p>
