@@ -27,6 +27,68 @@ function CvLink({
   );
 }
 
+function escapeRegExp(value: string) {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+function HighlightedText({
+  text,
+  highlights,
+}: {
+  text: string;
+  highlights: readonly string[];
+}) {
+  const activeHighlights = [...highlights]
+    .filter((highlight) => text.includes(highlight))
+    .sort((a, b) => b.length - a.length);
+
+  if (activeHighlights.length === 0) {
+    return <>{text}</>;
+  }
+
+  const pattern = new RegExp(
+    `(${activeHighlights.map(escapeRegExp).join("|")})`,
+    "g",
+  );
+
+  return (
+    <>
+      {text.split(pattern).map((part, index) =>
+        activeHighlights.includes(part) ? (
+          <strong key={`${part}-${index}`} className="font-bold text-[#15803d]">
+            {part}
+          </strong>
+        ) : (
+          <span key={`${part}-${index}`}>{part}</span>
+        ),
+      )}
+    </>
+  );
+}
+
+function SkillList({
+  skills,
+  highlights,
+}: {
+  skills: readonly string[];
+  highlights: readonly string[];
+}) {
+  return (
+    <>
+      {skills.map((skill, index) => (
+        <span key={skill}>
+          {highlights.includes(skill) ? (
+            <strong className="font-bold text-[#15803d]">{skill}</strong>
+          ) : (
+            skill
+          )}
+          {index < skills.length - 1 ? ", " : ""}
+        </span>
+      ))}
+    </>
+  );
+}
+
 export default function CVPage() {
   return (
     <div className="min-h-screen bg-[#eceae5] text-[#111827] print:bg-white">
@@ -88,7 +150,10 @@ export default function CVPage() {
             <section>
               <h2 className="cv-section">Professional Summary</h2>
               <p className="mt-1.5 text-[12.5px] leading-[1.55] text-[#1f2937]">
-                {cv.summary}
+                <HighlightedText
+                  text={cv.summary}
+                  highlights={cv.summaryHighlights}
+                />
               </p>
             </section>
 
@@ -98,19 +163,28 @@ export default function CVPage() {
                 <div className="grid grid-cols-[6.25rem_1fr] gap-x-2">
                   <dt className="font-semibold text-[#111827]">Frontend</dt>
                   <dd className="text-[#1f2937]">
-                    {cv.skills.frontend.join(", ")}
+                    <SkillList
+                      skills={cv.skills.frontend}
+                      highlights={cv.highlightSkills}
+                    />
                   </dd>
                 </div>
                 <div className="grid grid-cols-[6.25rem_1fr] gap-x-2">
                   <dt className="font-semibold text-[#111827]">Backend</dt>
                   <dd className="text-[#1f2937]">
-                    {cv.skills.backend.join(", ")}
+                    <SkillList
+                      skills={cv.skills.backend}
+                      highlights={cv.highlightSkills}
+                    />
                   </dd>
                 </div>
                 <div className="grid grid-cols-[6.25rem_1fr] gap-x-2">
                   <dt className="font-semibold text-[#111827]">Tools</dt>
                   <dd className="text-[#1f2937]">
-                    {cv.skills.tools.join(", ")}
+                    <SkillList
+                      skills={cv.skills.tools}
+                      highlights={cv.highlightSkills}
+                    />
                   </dd>
                 </div>
                 <div className="grid grid-cols-[6.25rem_1fr] gap-x-2">
@@ -139,7 +213,12 @@ export default function CVPage() {
                     <p className="text-[11px] text-[#6b7280]">{job.location}</p>
                     <ul className="mt-1 list-disc space-y-0.5 pl-[1.1rem] text-[12px] leading-[1.45] text-[#1f2937]">
                       {job.bullets.map((b) => (
-                        <li key={b}>{b}</li>
+                        <li key={b}>
+                          <HighlightedText
+                            text={b}
+                            highlights={cv.contentHighlights}
+                          />
+                        </li>
                       ))}
                     </ul>
                   </div>
@@ -180,7 +259,12 @@ export default function CVPage() {
                     <p className="text-[11px] text-[#6b7280]">{p.stack}</p>
                     <ul className="mt-0.5 list-disc space-y-0.5 pl-[1.1rem] text-[12px] leading-[1.45] text-[#1f2937]">
                       {p.bullets.map((b) => (
-                        <li key={b}>{b}</li>
+                        <li key={b}>
+                          <HighlightedText
+                            text={b}
+                            highlights={cv.contentHighlights}
+                          />
+                        </li>
                       ))}
                     </ul>
                   </div>
